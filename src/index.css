@@ -1,13 +1,318 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #00112c;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%), 0 5px 5px rgb(0 0 0 / 6%),
+    0 0 5px rgb(0 0 0 / 7%);
+}
+
+.brand {
+  margin: 5px 50px;
+}
+
+.brand img {
+  height: 9vh;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.banner {
+width: 100%;
+height: 30vh;
+background: url('./assets/bg.png');
+background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%), 0 5px 5px rgb(0 0 0 / 6%),
+    0 0 5px rgb(0 0 0 / 7%);
+}
+
+.search {
+  width: 100%;
+  height: 9vh;
+  background-color: #00112c;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%), 0 5px 5px rgb(0 0 0 / 6%),
+    0 0 5px rgb(0 0 0 / 7%);
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.search form {
+width: 50%;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search form input {
+  height: 4vh;
+  width: 60%;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 0 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.search form input::placeholder  {
+  color: black;
+}
+
+.search form input:focus {
+  border: 1px solid #ffd900;
+  transform: scale(1.031);
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.search form button {
+  height: 4vh;
+  width: 10%;
+  align-items: center;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: white;
+}
+
+.search form button:hover {
+  transform: scaleY(0.98);
+  border: 1px solid #ffd900;
+}
+
+.tags {
+  width: 100%;
+  text-align: center;
+}
+
+.tags h3 {
+  color: #00112c;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.tagsList {
+  width: 100%;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  gap: 0.5rem 0.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tagsList span {
+  padding: 1px 1px;
+  border: 1px solid #00112c;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  word-wrap:break-word;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%), 0 5px 5px rgb(0 0 0 / 6%),
+    0 0 5px rgb(0 0 0 / 7%);
+    margin-top: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.tagsList span svg {
+  font-size: 2rem;
+}
+
+.tagsList .dietary {
+  background-color: red;
+  color: white;
+}
+
+.tagsList .meal {
+background-color: #ff7637;
+color: #00112c;
+}
+
+.tagsList .holiday {
+  background-color: #009f4d;
+  color: white;
+}
+
+.tagsList .appliance {
+  background-color: #003666;
+  color: #ffc168;
+}
+
+.tagsList .seasonal {
+  background-color: #8e43e7;
+  color: #ffd900;
+}
+
+.tagsList .occasion {
+  background-color: black;
+  color: gold;
+}
+
+.tagsList .difficulty {
+  background-color: #7f181b;
+  color: white;
+}
+
+.tagsList .dish_style {
+  background-color: #d7d7d8;
+  color: #ed1b2e;
+}
+
+.recipes {
+  width: 100%;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 0.5rem 0.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.recipe-result {
+  height: 23vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%), 0 5px 5px rgb(0 0 0 / 6%),
+    0 0 5px rgb(0 0 0 / 7%);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.recipe-result:hover {
+  transform: scale(0.98);
+}
+
+.recipe-result h3 {
+  color: white;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.9);
+  margin-top: 5px;
+}
+
+.recipe-result-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-result .video {
+  width: 50%;
+  background-color: rgba(212, 117, 120, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.recipe-result .servings {
+  width: 50%;
+  background-color: rgba(212, 117, 120, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.singleRecipeWrapper {
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  transition: 0.3s all;
+  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%),
+    inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.closeIcon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-weight: 700;
+  color: red;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+}
+
+.recipeInfo {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  top: 15%;
+width: 100%;
+height: 70%;
+color: #00112c;
+cursor:default;
+background-color: white;
+box-shadow: 0 5px 10px rgb(0 0 0 / 10%), 0 5px 5px rgb(0 0 0 / 6%),
+    0 0 5px rgb(0 0 0 / 7%);
+    text-align: center;
+}
+
+.recipeContent {
+  width: 67%;
+}
+
+.recipeContent h1 {
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.recipeContent h4 {
+margin: 0 2px;
+}
+
+.recipeVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 100%;
+}
+
+.recipeVideoControl {
+  width: auto;
+  height: 250px;
 }
